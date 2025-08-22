@@ -34,16 +34,19 @@ const displayCategory = (categories) => {
 
 const loadAllPets = async (categories = "pets") => {
     document.getElementById('spinner-1').classList.remove("hidden")
+    let allPets = [];
     try {
         const res = await fetch(`https://openapi.programming-hero.com/api/peddy/${categories}`)
         const data = await res.json()
         // displayAllPets(data.pets)
         if (typeof (data.data) === "undefined") {
             displayAllPets(data.pets)
+            allPets = data.pets;
         }
         else {
             document.getElementById('pets-container').innerHTML = " "
             displayAllPets(data.data)
+            allPets = data.data;
         }
     }
     catch {
@@ -52,24 +55,15 @@ const loadAllPets = async (categories = "pets") => {
     finally {
         document.getElementById('spinner-1').classList.add("hidden")
     }
-    // const res = await fetch(`https://openapi.programming-hero.com/api/peddy/${categories}`)
-    // const data = await res.json()
-    // // displayAllPets(data.pets)
-    // if (typeof (data.data) === "undefined") {
-    //     displayAllPets(data.pets)
-    // }
-    // else {
-    //     document.getElementById('pets-container').innerHTML = " "
-    //     displayAllPets(data.data)
-    // }
-
-
-    // typeof(data.pets) != undefined ? console.log(data.pets) : console.log(data)
+    document.getElementById('sort-button').addEventListener('click', () => {
+        sortByView(allPets)
+    })
 
 }
 
 const displayAllPets = (pets) => {
     const petContainer = document.getElementById('pets-container')
+    petContainer.innerHTML = ""
     if (pets.length === 0) {
         petContainer.classList.remove("lg:grid", "md:grid")
         petContainer.innerHTML = `
@@ -199,7 +193,12 @@ const loadCategoryBasedPets = (container, category) => {
     })
 }
 
-document.getElementById('sort-button').addEventListener('click',)
+const sortByView = (data) => {
+    data.sort((a, b) => 
+        a.price - b.price
+    )
+    displayAllPets(data)
+}
 
 loadAllPets()
 loadCategory()
