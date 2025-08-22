@@ -1,0 +1,140 @@
+<!DOCaTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+        <title>Pet Adaption</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="w-11/12 mx-auto flex justify-between items-center mt-3">
+                <div class="flex gap-1">
+                    <img class="h-6" src="images/logo.webp" alt="">
+                    <h2 class="font-bold text-xl">Peddy</h2>
+                </div>
+                <div class="flex lg:gap-4 md:gap-3 gap-1 font-bold">
+                    <a href="">Home</a>
+                    <a href="">Shop</a>
+                    <a href="">Contact</a>
+                </div>
+                <div>
+                    <img class="h-10" src="https://img.icons8.com/?size=100&id=22396&format=png&color=000000" alt="">
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Banner Section -->
+            <section class=" w-11/12 mx-auto mt-3" id="start-container">
+                <div class="flex flex-col justify-center items-center">
+                    <h4 class="text-gray-400 font-bold">Bringing Families Together ❤️</h4>
+                    <h1 class="font-bold text-7xl mt-3 text-center lg:w-190 md:w-190">Your Path to Adoption Starts Here
+                    </h1>
+                    <p class="mt-3 lg:w-190 md:w-190 text-center">It is a long established fact that a reader will be
+                        distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                    <a href="#adopt-category" class="btn btn-success mt-4">View More</a>
+                    <img c src="images/pet.webp" alt="">
+                </div>
+            </section>
+
+            <!-- Adopt category Section -->
+            <section class="w-11/12 mx-auto" id="adopt-category">
+                <div class="w-6/14 mx-auto text-center">
+                    <h1 class="font-bold text-[40px]">Adopt Your Best Friend</h1>
+                    <p class="text-gray-400">It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                        has a.</p>
+                </div>
+                <div class="w-10/12 py-4 mx-auto lg:flex md:flex sm:grid grid-cols-2 justify-between lg:justify-center lg:items-center md:justify-center md:items-center"
+                    id="category-container">
+                <span id="spinner" class="loading loading-spinner text-primary hidden"></span>
+
+                </div>
+            </section>
+
+            <!-- All Pets Section -->
+            <section id="all-pets" class="w-11/12 mx-auto">
+                <div class="flex justify-between sm:my-3 sm:text-center">
+                    <h1 class="sm:my-3 font-bold text-[24px]">Best Deal For you</h1>
+                    <button id="sort-button" class="sm:my-3 btn btn-success">Sort by Price</button>
+                </div>
+                <div class="flex items-start">
+                    <span id="spinner-1" class="loading loading-dots loading-xl hidden"></span>
+                    <div class="lg:grid md:grid lg:grid-cols-3 md:grid-cols-2" id="pets-container">
+                        
+                    </div>
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-3 card shadow-sm" id="selected-pets">
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Display Modal -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box md:w-[700px] lg:w-[700px] sm:w-82">
+                    <div id="modal-content"></div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn md:w-116 lg:w-116 sm:w-70 rounded btn-success">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+        </main>
+        <!-- Footer Section -->
+        <footer class="my-10 bg-black text-white">
+            <section class="w-11/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 py-5" id="footer-container">
+                <div>
+                    <div class="flex gap-1 items-center">
+                        <img class="h-3" src="images/logo.webp" alt="">
+                        <h2 class="font-bold text-lg">Peddy</h2>
+                    </div>
+                    <div class="text-[10px] my-3 text-gray-400">
+                        <p>Location: av. Washington 165, NY CA 54003</p>
+                        <p>Phone: +31 85 964 47 25</p>
+                        <p>Email: info@yourdomain.com</p>
+                        <p>Openings hours: 9.00 AM - 5.00 PM</p>
+                    </div>
+                    <div class="flex my-3">
+                        <img class="w-11 h-11" src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                            alt="">
+                        <img class="w-11 h-11"
+                            src="https://img.icons8.com/?size=100&id=IALWhfjB37gY&format=png&color=000000" alt="">
+                        <img class="w-11 h-11"
+                            src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000" alt="">
+                        <img class="w-11 h-11"
+                            src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h3>Useful Links</h4>
+                    <div class="mt-3 text-gray-400">
+                        <p>Home</p>
+                        <p>About Us</p>
+                        <p>Animals</p>
+                        <p>Foundation</p>
+                        <p>Contact</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Drop a Message</h3>
+                    <input class="my-3 rounded p-2" type="text" placeholder="Enter Your Email">
+                    <button class="btn btn-error block text-white">Subscribe</button>
+                </div>
+            </section>
+        </footer>
+    </body>
+    <script src="js/index.js"></script>
+
+    </html>
